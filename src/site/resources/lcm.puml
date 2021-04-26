@@ -1,0 +1,29 @@
+@startuml
+
+'' Функция для настройки буквы и цвета значка у класса, а так же его класса
+'' $letter - буква, должна быть строкой из 1 символа
+'' $l_color - цвет, в виде названия или #numbers
+'' $stereotype - строка показывающаяся в << >> скобках над названием
+!function $class_logo ($letter, $l_color, $stereotype)
+    !return "<< (" + $letter + " , " + $l_color + " ) " + $stereotype + " >> "
+!endfunction
+
+'' Функция возвращает заголовочную строку для нового объекта класса
+'' $name - имя класса показываемого в загловке
+'' $letter, $l_color, $stereotype - параметры от функции $class_logo
+'' $alias - алиас объекта через который к классу нужно будет ссылаться
+'' $extension - строка с описанием расширения класса (белый прямоугольник в правом верхнем углу)
+!function $newNode( $name, $letter, $l_color, $stereotype, $alias, $extension)
+    !if  ($extension == "")
+        !$ext = ""
+    !else
+        !$ext = "<" + $extension + ">"
+    !endif
+    !return 'class "' + $name + '" as ' + $alias + $ext + ' ' + $class_logo($letter,$l_color, $stereotype) + " "
+!endfunction
+
+!unquoted function $class_section($name)
+    !return ".. " + $name + " .."
+!endfunction
+
+@end
