@@ -2,10 +2,10 @@
 !include lcm.puml
 
 class "cls" as cls1 $class_logo("E", "DarkRed", "class assd") {
-+asdf
-#asdf
-$class_section(название\nсекции\nфыва )
--asfd
+    +asdf
+    #asdf
+    $class_section(название\nсекции\nфыва )
+    -asfd
 }
 
 $newNode( "scenario", "E", "DarkRed", "scenario1", "class12", "ext str") {
