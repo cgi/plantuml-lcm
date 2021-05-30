@@ -26,4 +26,16 @@
     !return ".. " + $name + " .."
 !endfunction
 
+'' Функцция для создания объекта Сценария
+!unquoted function $scenario($name, $stereotype, $alias, $extension)
+    !return $newNode( $name, "S", "DarkRed", $stereotype, $alias, $extension)
+!endfunction
+
+'' Функцция для создания объекта Class
+!unquoted function $class($name, $stereotype, $alias, $extension)
+    !return $newNode( $name, "C", "#Grey", $stereotype, $alias, $extension)
+!endfunction
+
+!$code = "<color:royalBlue><size:14>"
+
 @end
