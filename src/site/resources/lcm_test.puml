@@ -1,5 +1,12 @@
 @startuml
 !include lcm.puml
+!define SPRITESURL https://raw.githubusercontent.com/rabelenda/cicon-plantuml-sprites/v1.0/sprites
+!includeurl SPRITESURL/tomcat.puml
+!includeurl SPRITESURL/kafka.puml
+!includeurl SPRITESURL/java.puml
+!includeurl SPRITESURL/cassandra.puml
+!includeurl SPRITESURL/activemq.puml
+!includeurl SPRITESURL/elasticsearch.puml
 
 class "cls" as cls1 $class_logo("E", "DarkRed", "class assd") {
     +asdf
@@ -7,8 +14,28 @@ class "cls" as cls1 $class_logo("E", "DarkRed", "class assd") {
     $class_section(название\nсекции\nфыва )
     -asfd
 }
+$newNode( \
+    "Имя Класса", \
+    "E", \
+    "DarkRed", \
+    "scenario1", \
+    "class13", \
+    "|<$java,scale=0.4,color=red> | <#Blue> |\n| <#Green>   | <#Grey> |" \
+    ) {
 
-$newNode( "scenario", "E", "DarkRed", "scenario1", "class12", "ext str") {
 }
 
+$newNode( "|<#Red> a asd asd asd  | <#Blue> b |\n| <#Green> c | <#Grey> dasd asd asd asd  |", "E", "DarkRed", "scenario1", "class12", "|<#Red> a asd asd asd  | <#Blue> b |\n| <#Green> c | <#Grey> dasd asd asd asd  |") {
+    |<#Red> a asd asd asd  | <#Blue> b |
+    | <#Green> c | <#Grey> dasd asd asd asd  |
+
+}
+
+$scenario( \
+    "Имя класса 2", \
+    "scenario2", \
+    "class14", \
+    "") {
+    + int i
+}
 @end
