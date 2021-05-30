@@ -38,4 +38,8 @@
 
 !$code = "<color:royalBlue><size:14>"
 
+!unquoted function $ref($text)
+    !return "<color:#Red>" + $text + "</color>"
+!endfunction
+
 @end
